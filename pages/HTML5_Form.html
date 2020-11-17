@@ -34,7 +34,8 @@
         </div>
         <div>
             <label for="tel">tel input type: </label>
-            <input type="tel" id="tel" name="tel">
+            <input type="tel" id="tel" name="tel" pattern="^[1-9]{2}\s[1-9]{1}[0-9]{9}$"
+            oninvalid="setCustomValidity('User need to enter a valid phone number')" oninput="setCustomValidity('')">
         </div>
         <div>
             <label for="search">search input type: </label>
