@@ -15,17 +15,21 @@
         </header>
         <div>
             <label for="text">text input type for Name: </label>
-            <input type="text" id="text" name="text"  pattern="^[A-Z]{1}[A-Za-z]{2,}$"
-            oninvalid="setCustomValidity('User need to enter a valid First Name')" 
-            oninput="setCustomValidity('')">
+            <input type="text" id="text" name="text" pattern="^[A-Z]{1}[A-Za-z]{2,}$"
+                oninvalid="setCustomValidity('User need to enter a valid First Name')" oninput="setCustomValidity('')">
         </div>
         <div>
             <label for="pwd">password input type: </label>
-            <input type="password" id="pwd" name="pwd" required>
+            <input type="password" id="pwd" name="pwd" required pattern="[A-Za-z\d]{8,}$"
+            oninvalid="setCustomValidity('User need to enter a valid password')"
+            oninput="setCustomValidity('')">
         </div>
         <div>
             <label for="email">email input type: </label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email"
+                pattern="^[a-zA-Z0-9+_-]+([.][a-zA-Z0-9]+)*@([a-zA-Z0-9]+)([.][a-z]+)?[.][a-z]{2,}$"
+                oninvalid="setCustomValidity('User need to enter a valid email address')"
+                oninput="setCustomValidity('')">
         </div>
         <div>
             <label for="url">url input type: </label>
@@ -37,7 +41,9 @@
         </div>
         <div>
             <label for="tel">tel input type: </label>
-            <input type="tel" id="tel" name="tel">
+            <input type="tel" id="tel" name="tel" pattern="^[1-9]{2}\s[1-9]{1}[0-9]{9}$"
+                oninvalid="setCustomValidity('User need to enter a valid phone number')"
+                oninput="setCustomValidity('')">
         </div>
         <div>
             <label for="search">search input type: </label>
@@ -50,12 +56,12 @@
         </div>
         <div>
             <label for="salary">Choose your salary:</label>
-            <input type="range" name="salary" id="salary" min="300000"
-            max="500000" step="100" value="400000">
+            <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
         </div>
         <div>
             <button>Submit</button>
         </div>
     </form>
 </body>
+
 </html>
